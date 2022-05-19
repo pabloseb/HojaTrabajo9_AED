@@ -1,5 +1,13 @@
+/**
+ * @author Pablo Herrera
+ * @since 19/05/2022
+ */
+
 import java.util.ArrayList;
 
+/**
+ * Matriz de adyacencia para la implementacion del grafo
+ */
 public class Matriz {
 
     private ArrayList<ArrayList<Float>> data;
@@ -7,14 +15,26 @@ public class Matriz {
     final float NegativeInfinity = Float.NEGATIVE_INFINITY;
     private int size = 0;
 
+    /**
+     * Constructor de una matriz vacia
+     */
     Matriz(){
         data = new ArrayList<ArrayList<Float>>();
     }
 
+    /**
+     * contructor de una matriz con dimension size
+     * @param size dimension
+     */
     Matriz(int size){
         this(size, false);
     }
 
+    /**
+     * constructo de una matriz con dimension size con posibles ceros
+     * @param size dimension matriz
+     * @param zero contiene cero o no
+     */
     Matriz(int size, boolean zero) {
         this();
         for (int i = 0; i < size; i++) {
@@ -32,7 +52,9 @@ public class Matriz {
         this.size = size;
     }
 
-    //scaleup
+    /**
+     * Metodo para aumentar la matriz proporcionalmente
+     */
     public void AumentarMatriz() {
         size = size + 1;
         for (ArrayList<Float> arr : data) {
@@ -45,7 +67,12 @@ public class Matriz {
         data.add(array);
     }
 
-    //set
+    /**
+     * Metodo para establecer valores de la matriz
+     * @param i posicion
+     * @param j posicion
+     * @param e valor
+     */
     public void setData(int i, int j, float e) {
         i--;
         j--;
@@ -54,13 +81,22 @@ public class Matriz {
         data.set(i, array);
     }
 
-    //get
+    /**
+     * metodo para obtener valores en diferentes posiciones de la matriz
+     * @param i posicion
+     * @param j posicion
+     * @return valor en las posiciones
+     */
     public Float get(int i, int j) {
         i--;
         j--;
         return data.get(i).get(j);
     }
 
+    /**
+     * Metodo para generar arreglo con valores maximos por columna
+     * @return arreglo
+     */
     private ArrayList<Float> MaxArray() {
         ArrayList<Float> MaxArr = new ArrayList<Float>();
         for (int i=0; i<size; i++) {
@@ -76,7 +112,10 @@ public class Matriz {
 
     }
 
-    //argmin
+    /**
+     * Metodo que gerena el minimo indice del arreglo
+     * @return indice minimo
+     */
     public int LowestIndex() {
         ArrayList<Float> maxArr = MaxArray();
         float min = Infinity;
@@ -90,6 +129,10 @@ public class Matriz {
         return lowestindex;
     }
 
+    /**
+     * metodo para generar una copia de la matriz
+     * @return matriz
+     */
     public Matriz GenerateCopy() {
         Matriz matriz = new Matriz(size, false);
         for (int i=1; i<=size; i++) {
@@ -100,15 +143,10 @@ public class Matriz {
         return matriz;
     }
 
-    //delete rowcol
-    public void Delete(int i) {
-        data.remove(i);
-        for (ArrayList<Float> arr : data) {
-            arr.remove(i);
-        }
-    }
-
-
+    /**
+     * Metodo para representar la matriz con cadenas
+     * @return matriz en cadena
+     */
     @Override
     public String toString() {
         String matriz_string = "";

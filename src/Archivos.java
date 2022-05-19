@@ -4,6 +4,11 @@ import java.io.BufferedReader;
 
 public class Archivos {
 
+    /**
+     * Metodo para leer archivos, no es necesario instanciar objeto pues metodo es estatico
+     * @return grafo
+     * @throws IOException no se encuentra el archivo
+     */
     public static Grafo leer() throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader("guategrafo.txt"));
         String row;

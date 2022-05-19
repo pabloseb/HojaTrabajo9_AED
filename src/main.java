@@ -1,3 +1,11 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Algoritmos y Estructuras de Datos
+ * Hoja de Trabajo No.9
+ * @author Pablo Herrera
+ * @since 19/05/2022
+ */
+
 import java.io.IOException;
 
 public class main {

@@ -1,8 +1,14 @@
+/**
+ * @author Pablo Herrera
+ * @since 19/05/2022
+ */
+
 import java.util.Scanner;
 
 public class Control {
 
     private Scanner scanner;
+
 
     Control(){
         scanner = new Scanner(System.in);
@@ -12,6 +18,10 @@ public class Control {
         System.out.println(string);
     }
 
+    /**
+     * Metodo para mostrar el menu del programa
+     * @return opcion escogida del menu
+     */
     public int Menu() {
         print("Ingrese una opcion del menu");
         print("1.Obtener la ruta mas contra entre dos ciudades");
@@ -34,17 +44,29 @@ public class Control {
         return opcion;
     }
 
+    /**
+     * Metodo para obtener la ciudad de origen segun indique el usuario
+     * @return Ciudad de Origen
+     */
     public String Origen() {
         print("\nIngrese ciudad de origen");
         scanner.nextLine();
         return scanner.nextLine();
     }
 
+    /**
+     * Metodo para obtener la ciudad de Destino segun indique el usuario
+     * @return Ciudad de Destino
+     */
     public String Destino() {
         print("\nIngrese ciudad de destino");
         return scanner.nextLine();
     }
 
+    /**
+     * Metodo para obtener la distancia entre dos ciudades
+     * @return distancia entre ciudades
+     */
     public float Distancia() {
         print("\nIngrese distancia en KM");
         while (true) {
@@ -57,6 +79,9 @@ public class Control {
         }
     }
 
+    /**
+     * Metodo para indicar la causa de eliminacion de conexion entre ciudades
+     */
     public void Causa(){
         print("Ingrese la causa del bloqueo entre estas ciudades");
         scanner.nextLine();
