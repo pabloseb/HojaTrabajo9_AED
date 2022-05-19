@@ -1,0 +1,10 @@
+CiudadDeGuatemala Mixco 15.1
+Mixco VillaNueva 12.0
+VillaNueva SanJuanSacatepequez 34.3
+SanJuanSacatepequez SanPedroCarcha 183.9
+SanPedroCarcha Coban 11.2
+Coban Quetzaltenango 214.4
+Quetzaltenango Jalapa 298.0
+Jalapa Escuintla 164.7
+Escuintla VillaCanales 57.5
+VillaCanales CiudadDeGuatemala 18.0
